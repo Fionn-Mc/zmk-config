@@ -1,4 +1,11 @@
-on: [push, pull_request, workflow_dispatch]
+# on: [push, pull_request, workflow_dispatch]
+
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "totem-dongle" ]
+  pull_request:
+    branches: [ "totem-dongle" ]
 
 jobs:
   build:
